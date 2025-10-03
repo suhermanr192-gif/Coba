@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedang Runtah</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #fff8f0;
+    }
+    header {
+      background: #8b4513;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #deb887;
+    }
+    nav a {
+      padding: 14px 20px;
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: #cd853f;
+      color: white;
+    }
+    .content {
+      padding: 20px;
+      display: none;
+    }
+    .active {
+      display: block;
+    }
+    h1, h2 {
+      color: #8b4513;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Wedang Runtah</h1>
+    <p>Minuman tradisional khas Tegal yang penuh rempah dan manfaat</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="showTab('home')">Home</a>
+    <a href="#" onclick="showTab('tentang')">Tentang</a>
+    <a href="#" onclick="showTab('resep')">Resep</a>
+  </nav>
+
+  <div id="home" class="content active">
+    <div class="card">
+      <h2>Selamat Datang</h2>
+      <p>Pernahkah Anda merasakan hangatnya minuman tradisional yang penuh rempah dan kaya manfaat? 
+      <b>Wedang Runtah</b> bukan sekadar minuman, tetapi warisan budaya khas Tegal yang mampu 
+      menghangatkan tubuh sekaligus menyehatkan.</p>
+    </div>
+  </div>
+
+  <div id="tentang" class="content">
+    <div class="card">
+      <h2>Apa itu Wedang Runtah?</h2>
+      <p><b>Wedang Runtah</b> adalah minuman tradisional khas dari Tegal, Jawa Tengah. 
+      Kata <b>wedang</b> berarti minuman hangat, sedangkan <b>runtah</b> berarti sisa-sisa. 
+      Namanya muncul karena minuman ini dibuat dari berbagai rempah-rempah dan bahan dapur yang masih bermanfaat.</p>
+
+      <h3>Ciri Khasnya:</h3>
+      <ul>
+        <li>Rasanya hangat, manis, dan aromatik.</li>
+        <li>Disajikan panas, cocok untuk menghangatkan tubuh.</li>
+        <li>Dulu sering diminum masyarakat pedesaan Tegal saat malam hari atau cuaca dingin.</li>
+        <li>Meskipun namanya "runtah", wedang ini kaya manfaat untuk kesehatan, 
+            seperti melancarkan peredaran darah, menghangatkan badan, dan meningkatkan daya tahan tubuh.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="resep" class="content">
+    <div class="card">
+      <h2>Resep Wedang Runtah</h2>
+      <h3>Bahan-bahan:</h3>
+      <ul>
+        <li>2 ruas jahe (geprek atau dibakar sebentar)</li>
+        <li>2 batang serai (memarkan)</li>
+        <li>3 lembar daun pandan</li>
+        <li>2 butir kapulaga</li>
+        <li>3 butir cengkeh</li>
+        <li>1 batang kayu manis</li>
+        <li>100 gram gula merah (serut)</li>
+        <li>2 sdm gula pasir (opsional)</li>
+        <li>700 ml air</li>
+      </ul>
+
+      <h3>Cara Membuat:</h3>
+      <ol>
+        <li>Rebus air hingga mendidih.</li>
+        <li>Masukkan jahe, serai, daun pandan, kapulaga, cengkeh, dan kayu manis.</li>
+        <li>Biarkan mendidih 10–15 menit sampai harum.</li>
+        <li>Tambahkan gula merah dan gula pasir, aduk hingga larut.</li>
+        <li>Angkat, saring bila perlu, lalu sajikan hangat.</li>
+      </ol>
+
+      <p><b>Tips:</b> Bisa ditambah susu, jeruk nipis, atau madu agar lebih segar.</p>
+    </div>
+  </div>
+
+  <script>
+    function showTab(tabId) {
+      const contents = document.querySelectorAll('.content');
+      contents.forEach(content => content.classList.remove('active'));
+      document.getElementById(tabId).classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
